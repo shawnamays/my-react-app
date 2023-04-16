@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 /* the import React line imports the React library, the core library for building user interfaces */
 
 /*the following defines a functional component that's called BirthChartCalculator.  
@@ -13,34 +14,45 @@ const BirthChartCalculator = () => {
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
-        // TODO: Add logic to calculate birth chart based on form inputs
-    };
-    return (
+        // TODO: Add logic to handle form submission
+      }
+    
+      return (
         <div>
-    {/*the divs are JSX elements that represent a div element in HTML.  It represents the outer container for the birth chart
-calculator component */}
-            {/* TODO: Add components for birth chart calculator */}
-      <h1>Birth Chart Calculator</h1>
-      <form onSubmit={handleFormSubmit}>
-      <label>
-          Date of Birth:
-          <input
-            type="date"
-            value={dateOfBirth}
-            onChange={(event) => setDateOfBirth(event.target.value)}
-          />
-        </label>
-
-
-      </form>
-      {/* TODO: Add form and inputs for user input */}
-      {/* TODO: Add logic to calculate birth chart */}
-      {/* TODO: Display birth chart results */}
+          {/* TODO: Add components for birth chart calculator */}
+          <h1>Birth Chart Calculator</h1>
+          <form onSubmit={handleFormSubmit}>
+            <label>
+              Date of Birth:
+              <input
+                type="date"
+                value={dateOfBirth}
+                onChange={(event) => setDateOfBirth(event.target.value)}
+              />
+            </label>
+            <label>
+              Time of Birth:
+              <input
+                type="time"
+                value={timeOfBirth}
+                onChange={(event) => setTimeOfBirth(event.target.value)}
+              />
+            </label>
+            <label>
+              Location of Birth:
+              <input
+                type="text"
+                value={locationOfBirth}
+                onChange={(event) => setLocationOfBirth(event.target.value)}
+              />
+            </label>
+            <button type="submit">Calculate</button>
+          </form>
+          {/* TODO: Add logic to calculate birth chart */}
+          {/* TODO: Display birth chart results */}
         </div>
-    );
+      );
+    };
 
-
-
-};
 export default BirthChartCalculator;
 /* this line exports the BirthChartCalculator component so that it can be inmported and used in other parts of your app */
