@@ -15,6 +15,26 @@ const BirthChartCalculator = () => {
     const handleFormSubmit = (event) => {
         event.preventDefault();
         // TODO: Add logic to handle form submission
+        // Extracting values from state
+  const date = new Date(dateOfBirth); // Convert dateOfBirth to a Date object
+  const time = timeOfBirth; // Use timeOfBirth as is
+  const location = locationOfBirth; // Use locationOfBirth as is
+  
+  // Constructing API request URL
+  const apiUrl = `https://api.example.com/birth-chart?date=${date}&time=${time}&location=${location}`;
+  
+  try {
+    // Fetching data from the API
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    
+    // TODO: Perform birth chart calculation using fetched data
+    // Example: Display alert with API response
+    alert(`API Response: ${JSON.stringify(data)}`);
+  } catch (error) {
+    console.error('Failed to fetch data from API:', error);
+  }
+}
       }
     
       return (
