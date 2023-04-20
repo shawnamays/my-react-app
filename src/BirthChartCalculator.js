@@ -29,6 +29,7 @@ const BirthChartCalculator = () => {
     const data = await response.json();
     
     // TODO: Perform birth chart calculation using fetched data
+
     // Example: Display alert with API response
     alert(`API Response: ${JSON.stringify(data)}`);
   } catch (error) {
@@ -39,7 +40,7 @@ const BirthChartCalculator = () => {
     
       return (
         <div>
-          {/* TODO: Add components for birth chart calculator */}
+          {/* TODO: Add components for birth chart calculator for areas in the chart */}
           <h1>Birth Chart Calculator</h1>
           <form onSubmit={handleFormSubmit}>
             <label>
